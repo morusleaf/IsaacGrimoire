@@ -64,7 +64,7 @@ bool Inquirer::getPillsTable(bool *discovered, int *effect) {
 	try
 	{
 #ifdef _WIN64
-		mem_address_t pManager = memory->readAddr(base + 0x2E2634);
+		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
 #endif
@@ -72,8 +72,8 @@ bool Inquirer::getPillsTable(bool *discovered, int *effect) {
 		if (floorNum == 0) throw not_in_game();
 
 #ifdef _WIN64
-		mem_address_t discoverAddr = pManager + 0x9865;
-		mem_address_t effectAddr = pManager + 0x9830;
+		mem_address_t discoverAddr = pManager + 0x9869;
+		mem_address_t effectAddr = pManager + 0x9834;
 #else
         mem_address_t discoverAddr = pManager + 0xB4F1;
         mem_address_t effectAddr = pManager + 0xB4BC;
@@ -125,7 +125,7 @@ bool Inquirer::getItemsFromRoom(ItemList* list, ImageList* imglist, bool *pillsD
 	try
 	{
 #ifdef _WIN64
-		mem_address_t pManager = memory->readAddr(base + 0x2E2634);
+		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
 #endif
@@ -138,7 +138,7 @@ bool Inquirer::getItemsFromRoom(ItemList* list, ImageList* imglist, bool *pillsD
 		//Log("%X %X %d", curse, blindMask, blind);
 
 #ifdef _WIN64
-		mem_address_t pe1 = memory->readAddr(pManager + 0x7014);
+		mem_address_t pe1 = memory->readAddr(pManager + 0x7018);
 		mem_address_t pe2 = pe1 + 0xE9C;
 		mem_address_t pEntityList = memory->readAddr(pe2 + 0x50);
 		uint32_t EntityListLength = memory->readu32(pe2 + 0x48);
@@ -218,7 +218,7 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 	try
 	{
 #ifdef _WIN64
-		mem_address_t pManager = memory->readAddr(base + 0x2E2634);
+		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
 #endif
@@ -226,7 +226,7 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 		if (floorNum == 0) throw not_in_game();
 
 #ifdef _WIN64
-		mem_address_t p2 = memory->readAddr(pManger + 0xB7D4);
+		mem_address_t p2 = memory->readAddr(pManger + 0xB7D8);
 		mem_address_t pPlayer = memory->readAddr(p2);
 		data_t trinketNum1 = memory->readData(pPlayer + 0x1D9C);
 		data_t trinketNum2 = memory->readData(pPlayer + 0x1DA0);
@@ -332,7 +332,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
 	bool ret = true;
 	try {
 #ifdef _WIN64
-		mem_address_t pManager = memory->readAddr(base + 0x2E2634);
+		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
 #endif
@@ -340,7 +340,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
 		if (floorNum == 0) throw not_in_game();
 
 #ifdef _WIN64
-		mem_address_t p2 = memory->readAddr(pManager + 0xB7D4);
+		mem_address_t p2 = memory->readAddr(pManager + 0xB7D8);
 		mem_address_t pPlayer = memory->readAddr(p2);
 #else
         mem_address_t p2 = memory->readAddr(pManager + 0xD2A0);
@@ -359,7 +359,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
 		data_t rawMoveSpeed   = memory->readData(pPlayer + 0x1CDC);
 		data_t rawLuck        = memory->readData(pPlayer + 0x1CE0);
 #else
-        // TODO
+        // TODO: I have not find coordinate :-)
         data_t rawPlayerX     = 0;
         data_t rawPlayerY     = 0;
         data_t rawAttackDelay = memory->readData(pPlayer + 0x1D68);

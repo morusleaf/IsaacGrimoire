@@ -12,4 +12,4 @@
 #define SHOTHEIGHT_MENU "shot height"
 #define MOVESPEED_MENU "move speed"
 #define LUCK_MENU "luck"
-#define GAMEBUTTON_MENU "open game"
+#define GAMEBUTTON_MENU "run game via steam"

@@ -30,7 +30,8 @@ void ItemPane::resetBoxesType() {
 	}
 }
 
-void ItemPane::refresh(ItemList *roomItems, ItemList *playerItems, ImageList *roomImgs, ImageList *playerImgs, bool roomListChanged) {
+void ItemPane::refresh(ItemList *roomItems, ItemList *playerItems,
+        ImageList *roomImgs, ImageList *playerImgs, bool roomListChanged) {
 	UILog("refresh ItemPane");
 	clear();
 	assert(roomItems->size() == roomImgs->size());
@@ -38,18 +39,22 @@ void ItemPane::refresh(ItemList *roomItems, ItemList *playerItems, ImageList *ro
 	int roomListSize = roomItems->size();
 	int index = 0;
 	for (int i = 0; i < roomListSize; i++) {
-		ItemImageBox *itembox = new ItemImageBox(ITEMBOX_X(index), ITEMBOX_Y(index), ITEM_W, ITEM_H, infopane, roomItems->at(i));
+		ItemImageBox *itembox = new ItemImageBox(ITEMBOX_X(index), ITEMBOX_Y(index), 
+                ITEM_W, ITEM_H, infopane, roomItems->at(i));
 		itembox->image(roomImgs->at(i));
 		add(itembox);
 		if (i == 0 && roomListChanged) itembox->setChosen();
 		index++;
 	}
 	int playerListSize = playerItems->size();
+    bool chooseFirstPlayerItem = (roomListSize == 0 || !roomListChanged);
 	for (int i = 0; i < playerListSize; i++) {
-		ItemImageBox *itembox = new ItemImageBox(ITEMBOX_X(index), ITEMBOX_Y(index), ITEM_W, ITEM_H, infopane, playerItems->at(i));
+		ItemImageBox *itembox = new ItemImageBox(ITEMBOX_X(index), ITEMBOX_Y(index),
+                ITEM_W, ITEM_H, infopane, playerItems->at(i));
 		itembox->image(playerImgs->at(i));
 		itembox->color(FL_DARK1);
 		add(itembox);
+        if (i == 0 && chooseFirstPlayerItem) itembox->setChosen();
 		index++;
 	}
 	redraw();

@@ -95,5 +95,7 @@ void ItemTab::refresh() {
 	delete lastPlayerItems;
 	lastRoomItems = newRoomItems;
 	lastPlayerItems = newPlayerItems;
+    // roomListNotChanged == true: show 1st item in roomList
+    // roomListNotChanged == false:show 1st item in playerList
 	itempane->refresh(lastRoomItems, lastPlayerItems, &roomImgs, &playerImgs, !roomListNotChanged);
 }

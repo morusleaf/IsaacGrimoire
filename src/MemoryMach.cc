@@ -117,12 +117,7 @@ mem_address_t Memory::getBaseAddress(mach_port_t task) {
     /* task_suspend(task); */
     ret = mach_vm_region(task, &addr, &size, VM_REGION_BASIC_INFO,
             (vm_region_info_t) &info, &count, &object_name);
-    if (ret != KERN_SUCCESS) {
-        throw read_memory_error();
-        /* ErrorLog("mach_vm_region %d - %s", ret, mach_error_string(ret)); */
-        /* /1* task_resume(task); *1/ */
-        /* return false; */
-    }
+    if (ret != KERN_SUCCESS) throw read_memory_error();
     /* task_resume(task); */
     return addr + size;
 }
