@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+        <key>CFBundleName</key>
+        <string>IsaacGrimoire</string>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <!-- <key>CFBundleVersion</key> -->
+        <!-- <string>59</string> -->
+        <key>CFBundleShortVersionString</key>
+        <string>1.0</string>
+        <key>CFBundleSignature</key>
+        <string>none</string>
+        <key>CFBundleExecutable</key>
+        <string>auth</string>
+        <key>SecTaskAccess</key>
+        <string>allowed</string>
+</dict>
+</plist>

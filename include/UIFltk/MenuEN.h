@@ -1,0 +1,15 @@
+#pragma once
+
+#define WINDOW_MENU "Isaac's Grimoire"
+#define ITEMS_MENU "Items"
+#define STATS_MENU "Stats"
+#define SETTING_MENU "Setting"
+#define TITLE_MENU "Title"
+#define ATTACKDAMAGE_MENU "damage"
+#define ATTACKDELAY_MENU "attack delay"
+#define ATTACKRANGE_MENU "attack range"
+#define SHOTSPEED_MENU "shot speed"
+#define SHOTHEIGHT_MENU "shot height"
+#define MOVESPEED_MENU "move speed"
+#define LUCK_MENU "luck"
+#define GAMEBUTTON_MENU "open game"

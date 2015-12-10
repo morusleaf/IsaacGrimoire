@@ -1,0 +1,54 @@
+[
+	{
+		"index": 1,
+		"image": "gfx/pills/0.png"
+	},
+	{
+		"index": 2,
+		"image": "gfx/pills/1.png"
+	},
+	{
+		"index": 3,
+		"image": "gfx/pills/2.png"
+	},
+	{
+		"index": 10,
+		"image": "gfx/pills/3.png"
+	},
+	{
+		"index": 4,
+		"image": "gfx/pills/4.png"
+	},
+	{
+		"index": 5,
+		"image": "gfx/pills/5.png"
+	},
+	{
+		"index": 6,
+		"image": "gfx/pills/6.png"
+	},
+	{
+		"index": 11,
+		"image": "gfx/pills/7.png"
+	},
+	{
+		"index": 7,
+		"image": "gfx/pills/8.png"
+	},
+	{
+		"index": 8,
+		"image": "gfx/pills/9.png"
+	},
+	{
+		"index": 9,
+		"image": "gfx/pills/10.png"
+	},
+	{
+		"index": 12,
+		"image": "gfx/pills/11.png"
+	},
+	{
+		"index": 13,
+		"image": "gfx/pills/15.png"
+	}
+]
