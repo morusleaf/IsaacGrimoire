@@ -60,7 +60,7 @@ mem_address_t Memory::getBase() {
 	return (mem_address_t)(hMods[0]);
 }
 
-void Memory::read(mem_address_t addr, size_t size, uint8_t* buffer, size_t *realsize)
+void Memory::read(mem_address_t addr, mem_size_t size, uint8_t* buffer, mem_size_t *realsize)
 {
 	SIZE_T numBytesRead;
 	BOOL ret = ReadProcessMemory(gtask, (void *)addr, buffer, size, &numBytesRead);
@@ -77,4 +77,8 @@ void Memory::read(mem_address_t addr, size_t size, uint8_t* buffer, size_t *real
 
 mem_address_t Memory::readAddr(mem_address_t address) {
 	return (mem_address_t)readu64(address);
+}
+
+data_t Memory::readData(mem_address_t address) {
+    return (data_t)readu32(address);
 }

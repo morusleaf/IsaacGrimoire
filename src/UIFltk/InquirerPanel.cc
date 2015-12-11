@@ -15,10 +15,12 @@ InquirerPanel::InquirerPanel(int x, int y, int w, int h) :
 	}
 	catch (std::ifstream::failure& e) {
 		ErrorLog("Can not open/read/close JSON/JS file");
+        ALERT("Can not open/read/close JSON/JS file");
 		exit(1);
 	}
 	catch (Json::RuntimeError& e) {
 		ErrorLog("Read JSON/JS file error");
+        ALERT("Read JSON/JS file error");
 		exit(1);
 	}
 	end();

@@ -11,8 +11,13 @@ void timeup(void *p) {
 		else if (panel->value() == panel->stattab)
 			panel->stattab->refresh();
 	}
+    catch (std::exception &e) {
+        ErrorLog("uncatched exception in timeup: %s", e.what());
+        ALERT(e.what());
+    }
 	catch (...) {
 		ErrorLog("Error Occurerd in timeup");
+        ALERT("Unknown exception in timeup");
 	}
 	Fl::repeat_timeout(0.5, timeup, p);
 }
@@ -30,7 +35,12 @@ int main(int argc, char* argv[]) {
 	try {
 		return Fl::run();
 	}
+    catch (std::exception &e) {
+        ErrorLog("uncatched exception in main: %s", e.what());
+        ALERT(e.what());
+    }
 	catch (...) {
 		ErrorLog("Unknown exception");
+        ALERT("Unknown exception in main");
 	}
 }

@@ -227,11 +227,5 @@ pills =
         "description": [], 
         "id": 37, 
         "title": "Retro Vision"
-    },
-    {
-		"kind": "pill",
-        "description": [], 
-        "id": 37, 
-        "title": "Unknown pill"
     }
 ]

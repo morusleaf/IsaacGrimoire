@@ -6,10 +6,8 @@
         <string>IsaacGrimoire</string>
         <key>CFBundlePackageType</key>
         <string>APPL</string>
-        <!-- <key>CFBundleVersion</key> -->
-        <!-- <string>59</string> -->
         <key>CFBundleShortVersionString</key>
-        <string>1.0</string>
+        <string>0.6</string>
         <key>CFBundleSignature</key>
         <string>none</string>
         <key>CFBundleExecutable</key>

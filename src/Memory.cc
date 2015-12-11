@@ -6,7 +6,7 @@
 #include "exception/read_memory_error.h"
 #include "util.h"
 
-#ifdef _WIN64
+#ifdef _WIN32
 #else
 #include <mach/vm_map.h>
 #include <mach/mach_vm.h>

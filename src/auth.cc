@@ -1,6 +1,7 @@
 #include <Security/Authorization.h>
 #include <Security/AuthorizationTags.h>
 #include <string.h>
+#include "util.h"
 
 // Run the plugin as privileged process since we need to read other process
 // Reference: http://www.occam.com/osx/OSX_SecFmwk.pdf
@@ -23,8 +24,14 @@ int main(int argc, char *argv[]) {
             kAuthorizationEmptyEnvironment, flags, &ref);
     if (status != errAuthorizationSuccess)
         return -1;
+    /* ALERT("Authorization created"); */
+    char *GrimoireArgs[] = {NULL};
+    FILE *pipe = NULL;
     status = AuthorizationExecuteWithPrivileges(ref, fileName,
-            kAuthorizationFlagDefaults, NULL, NULL);
+            kAuthorizationFlagDefaults, GrimoireArgs, &pipe);
+    /* char buffer[1024]; */
+    /* sprintf(buffer, "Authorization execute status: %d", status); */
+    /* ALERT(buffer); */
     if (status != errAuthorizationSuccess)
         return -1;
     AuthorizationFree(ref, kAuthorizationFlagDestroyRights);

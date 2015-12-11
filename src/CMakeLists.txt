@@ -25,11 +25,12 @@ ADD_EXECUTABLE(grimoire
 )
 
 TARGET_LINK_LIBRARIES(grimoire
-    png
     ${FLTK_LIBRARIES}
     ${OPENGL_LIBRARIES}
     ${PROJECT_SOURCE_DIR}/lib/libjsoncpp.a
     /usr/local/lib/libfltk_images.a
+    /usr/local/lib/libfltk_png.a
+    /usr/local/lib/libfltk_z.a
 )
 
 ADD_EXECUTABLE(auth
@@ -38,6 +39,8 @@ ADD_EXECUTABLE(auth
 
 TARGET_LINK_LIBRARIES(auth
     ${SECURITY_FRAMEWORK}
+    ${FLTK_LIBRARIES}
+    ${OPENGL_LIBRARIES}
 )
 
 install(TARGETS grimoire auth

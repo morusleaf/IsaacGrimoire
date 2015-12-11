@@ -2,7 +2,7 @@
 
 #include <string>
 
-#ifdef _WIN64
+#ifdef _WIN32
 #include <windows.h>
 #include <psapi.h>
 #else
@@ -10,7 +10,7 @@
 #include <mach/message.h>
 #endif
 
-#ifdef _WIN64
+#ifdef _WIN32
 #define mem_address_t int long
 #define data_t uint32_t
 #define mem_size_t SIZE_T
@@ -23,7 +23,7 @@
 #define ret_t kern_return_t
 #endif
 
-#ifdef _WIN64
+#ifdef _WIN32
 #include "MemoryWin64.h"
 #else
 #include "MemoryMach.h"

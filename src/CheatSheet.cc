@@ -9,8 +9,8 @@ static bool endwith(std::string const &value, std::string const &ending) {
 	return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
 
-CheatSheet::CheatSheet(std::string fileName[ItemKindNum], std::string pillsPicName) {
-#ifdef _WIN64
+CheatSheet::CheatSheet(std::string fileName[ItemKindNum], std::string pillsPicName, std::string specialName) {
+#ifdef _WIN32
 #else
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef bundleURL = CFBundleCopyBundleURL(mainBundle);
@@ -28,25 +28,28 @@ CheatSheet::CheatSheet(std::string fileName[ItemKindNum], std::string pillsPicNa
 		lists[i] = ItemList();
 
 	for (unsigned i = 0; i<ItemKindNum; i++) {
-		std::ifstream *ifs = new std::ifstream();
-		ifs->exceptions(std::ifstream::failbit | std::ifstream::badbit);
+		std::ifstream ifs = std::ifstream();
+		ifs.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         // append fileanme to the end of rootpath
         // now rootpath contains absolute path of the file
-        strcpy(pFileName, fileName[i].c_str());
-        ifs->open(rootpath);
+        memcpy(pFileName, fileName[i].c_str(), fileName[i].size()+1);
+        ifs.open(rootpath);
 		/* ifs->open(fileName[i]); */
-		createSheetFromJS(ifs, (ItemKind)i);
-		ifs->close();
-		delete ifs;
+		createSheetFromJS(&ifs, (ItemKind)i);
+		ifs.close();
 	}
 
-	std::ifstream *ifs = new std::ifstream();
-	ifs->exceptions(std::ifstream::failbit | std::ifstream::badbit);
-    strcpy(pFileName, pillsPicName.c_str());
-	ifs->open(rootpath);
-	createPillsImgListFromJSON(ifs);
-	ifs->close();
-	delete ifs;
+	std::ifstream ifs = std::ifstream();
+	ifs.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+    memcpy(pFileName, pillsPicName.c_str(), pillsPicName.size()+1);
+	ifs.open(rootpath);
+	createPillsImgListFromJSON(&ifs);
+	ifs.close();
+
+    memcpy(pFileName, specialName.c_str(), specialName.size()+1);
+    ifs.open(rootpath);
+    createSpecialListFromJSON(&ifs);
+    ifs.close();
 }
 
 CheatSheet::~CheatSheet() {
@@ -58,13 +61,28 @@ CheatSheet::~CheatSheet() {
 			delete img;
 }
 
+void CheatSheet::createSpecialListFromJSON(std::ifstream *ifs) {
+    Json::Value root;
+    (*ifs) >> root;
+    specialList.reserve(7);
+    specialImgList.reserve(6);
+    for (Json::Value node : root) {
+		int id = node["id"].asInt();
+        specialList[id] = new Item(node);
+		std::string imageRelPath = node.get("image", "").asString();
+        if (imageRelPath == "") continue;
+        memcpy(pFileName, imageRelPath.c_str(), imageRelPath.size()+1);
+        specialImgList[id] = new ImageType(rootpath);
+    }
+}
+
 void CheatSheet::createPillsImgListFromJSON(std::ifstream *ifs) {
 	Json::Value root;
 	(*ifs) >> root;
 	for (Json::Value node : root) {
 		std::string imageRelPath = node["image"].asString();
 		int index = node["index"].asInt();
-        strcpy(pFileName, imageRelPath.c_str());
+        memcpy(pFileName, imageRelPath.c_str(), imageRelPath.size()+1);
 		imglists[Pill][index] = new ImageType(rootpath);
 	}
 }
@@ -109,7 +127,7 @@ void CheatSheet::createSheetFromJSON(std::ifstream *ifs, ItemKind kind) {
 		lists[kind][index] = new Item(node);
 		if (kind != Pill) {
             std::string ImgRelPath = node["image"].asString();
-            strcpy(pFileName, ImgRelPath.c_str());
+            memcpy(pFileName, ImgRelPath.c_str(), ImgRelPath.size()+1);
 			imglists[kind][index] = new ImageType(rootpath);
         }
 	}
@@ -118,14 +136,21 @@ void CheatSheet::createSheetFromJSON(std::ifstream *ifs, ItemKind kind) {
 Item* CheatSheet::getItem(ItemKind kind, int index, bool blind) {
 	if (kind >= 0 && kind < ItemKindNum)
 		if (kind == Collectible && blind)
-			return lists[Collectible][lists[Collectible].size() - 1];
-		else if (kind == Card && blind)
-			return lists[kind][lists[kind][index]->getGroundId()];
+			/* return lists[Collectible][lists[Collectible].size() - 1]; */
+            return UNKNOWN_ITEM;
+		else if (kind == Card && blind) {
+			/* return lists[kind][lists[kind][index]->getGroundId()]; */
+            int groundId = lists[Card][index]->getGroundId();
+            // if groundId == 0: Dice Shard, Emergency Contact
+            if (groundId == 0) return lists[Card][index];
+            else return specialList[groundId];
+        }
 		else if (kind == Pill) {
 			if (blind)
-				return lists[kind][lists[Pill].size() - 1];
+				/* return lists[kind][lists[Pill].size() - 1]; */
+                return UNKNOWN_PILL;
 			else
-				return lists[kind][index];
+				return lists[Pill][index];
 		}
 		else if (index < lists[kind].size() && index > 0)
 			return lists[kind][index];
@@ -143,9 +168,15 @@ size_t CheatSheet::size(ItemKind kind) {
 ImageType* CheatSheet::getImg(ItemKind kind, int index, bool blind) {
 	if (kind >= 0 && kind < ItemKindNum)
 		if (kind == Collectible && blind)
-			return imglists[Collectible][lists[Collectible].size() - 1];
-		else if (kind == Card && blind)
-			return imglists[kind][lists[kind][index]->getGroundId()];
+            return UNKNOWN_ITEM_IMG;
+			/* return imglists[Collectible][lists[Collectible].size() - 1]; */
+		else if (kind == Card && blind) {
+            int groundId = lists[Card][index]->getGroundId();
+            // if groundId == 0: Dice Shard, Emergency Contact
+            if (groundId == 0) return imglists[Card][index];
+            else return specialImgList[groundId];
+			/* return imglists[kind][lists[kind][index]->getGroundId()]; */
+        }
 		else if (index < lists[kind].size() && index > 0)
 			return imglists[kind][index];
 		else

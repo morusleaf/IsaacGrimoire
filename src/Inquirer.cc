@@ -14,7 +14,7 @@ Inquirer::Inquirer() {
 		"cards.js",
 		"pills.js"
 	};
-	cheatsheet = new CheatSheet(fileName, "pillspic.json");
+	cheatsheet = new CheatSheet(fileName, "pillspic.json", "special.json");
 }
 
 Inquirer::~Inquirer() {
@@ -22,7 +22,7 @@ Inquirer::~Inquirer() {
 	delete cheatsheet;
 }
 
-#ifdef _WIN64
+#ifdef _WIN32
 #define PROCNAME "Binding of Isaac: Afterbirth"
 #else
 #define PROCNAME "The Binding of I"
@@ -63,7 +63,7 @@ bool Inquirer::getPillsTable(bool *discovered, int *effect) {
 	
 	try
 	{
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
@@ -71,7 +71,7 @@ bool Inquirer::getPillsTable(bool *discovered, int *effect) {
 		data_t floorNum = memory->readData(pManager);
 		if (floorNum == 0) throw not_in_game();
 
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t discoverAddr = pManager + 0x9869;
 		mem_address_t effectAddr = pManager + 0x9834;
 #else
@@ -124,7 +124,7 @@ bool Inquirer::getItemsFromRoom(ItemList* list, ImageList* imglist, bool *pillsD
 	bool ret = true;
 	try
 	{
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
@@ -137,7 +137,7 @@ bool Inquirer::getItemsFromRoom(ItemList* list, ImageList* imglist, bool *pillsD
 		bool blind = (curse & blindMask) != 0;
 		//Log("%X %X %d", curse, blindMask, blind);
 
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pe1 = memory->readAddr(pManager + 0x7018);
 		mem_address_t pe2 = pe1 + 0xE9C;
 		mem_address_t pEntityList = memory->readAddr(pe2 + 0x50);
@@ -151,7 +151,7 @@ bool Inquirer::getItemsFromRoom(ItemList* list, ImageList* imglist, bool *pillsD
 
 		for (unsigned index = 0; index < EntityListLength; index++) {
 			mem_address_t pEntity = memory->readAddr(pEntityList + index * sizeof(mem_address_t));
-#ifdef _WIN64
+#ifdef _WIN32
 			memory->read(pEntity + 0x24, 12, buff, NULL);
 #else
             memory->read(pEntity + 0x30, 12, buff, NULL);
@@ -217,7 +217,7 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 	bool ret = true;
 	try
 	{
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
@@ -225,8 +225,8 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 		data_t floorNum = memory->readData(pManager);
 		if (floorNum == 0) throw not_in_game();
 
-#ifdef _WIN64
-		mem_address_t p2 = memory->readAddr(pManger + 0xB7D8);
+#ifdef _WIN32
+		mem_address_t p2 = memory->readAddr(pManager + 0xB7D8);
 		mem_address_t pPlayer = memory->readAddr(p2);
 		data_t trinketNum1 = memory->readData(pPlayer + 0x1D9C);
 		data_t trinketNum2 = memory->readData(pPlayer + 0x1DA0);
@@ -246,17 +246,19 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 			imglist->push_back(cheatsheet->getImg(Trinket, trinketNum2));
 		}
 
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pTable = pPlayer + 0x1DA4;
 #else
         mem_address_t pTable = pPlayer + 0x1F28;
 #endif
+        // table[0] is invalid
+        // table[cheatsheet->size(Collectible)-1] is Mega Blast
 		int tablesize = cheatsheet->size(Collectible);
 		//Log("tablesize = %d", tablesize);
 		buff = (uint8_t*)malloc(sizeof(data_t) * tablesize);
 		memory->read(pTable, sizeof(data_t) * tablesize, buff, NULL);
 		data_t* table = (data_t*)buff;
-		for (int i = 0; i < tablesize; i++)
+		for (int i = 1; i <tablesize; i++)
 			if (table[i] != 0) {
 				list->push_back(cheatsheet->getItem(Collectible, i));
 				imglist->push_back(cheatsheet->getImg(Collectible, i));
@@ -264,7 +266,7 @@ bool Inquirer::getItemsFromPlayer(ItemList* list, ImageList* imglist, bool *pill
 		//Log("%lu", list->size());
 		bool havePHD = (bool)table[75];
 
-#ifdef _WIN64
+#ifdef _WIN32
 		data_t cardpillNum1 = memory->readData(pPlayer + 0x4BE0);
 		data_t cardpillNum2 = memory->readData(pPlayer + 0x4BE8);
 		data_t cardpillType1 = memory->readData(pPlayer + 0x4BE4) & 1;
@@ -331,7 +333,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
 
 	bool ret = true;
 	try {
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t pManager = memory->readAddr(base + 0x2E4634);
 #else
         mem_address_t pManager = memory->readAddr(base + 0x30AF30);
@@ -339,7 +341,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
 		data_t floorNum = memory->readData(pManager);
 		if (floorNum == 0) throw not_in_game();
 
-#ifdef _WIN64
+#ifdef _WIN32
 		mem_address_t p2 = memory->readAddr(pManager + 0xB7D8);
 		mem_address_t pPlayer = memory->readAddr(p2);
 #else
@@ -347,7 +349,7 @@ bool Inquirer::getStat(int &attackStyle, float &attackDamage, int &attackDelay, 
         mem_address_t pPlayer = memory->readAddr(p2);
 #endif
 
-#ifdef _WIN64
+#ifdef _WIN32
 		data_t rawPlayerX     = memory->readData(pPlayer + 0x055C);
 		data_t rawPlayerY     = memory->readData(pPlayer + 0x0560);
 		data_t rawAttackDelay = memory->readData(pPlayer + 0x1C00);

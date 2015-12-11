@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 static void gamebutton_callback(Fl_Widget *w, void*) {
-#ifdef _WIN64
+#ifdef _WIN32
 	system("start steam://rungameid/250900");
 #else
     system("open steam://rungameid/250900");

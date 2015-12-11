@@ -1,0 +1,53 @@
+[
+	{
+		"kind": "card",
+		"description": [
+			"Cannot tell you"
+		],
+		"title": "Unknown card",
+		"image": "gfx/cards/cards_unknown_001.png",
+		"id": 1
+	},
+	{
+		"kind": "card",
+		"description": [
+			"Cannot tell you"
+		],
+		"title": "Unknown special card",
+		"image": "gfx/cards/cards_unknown_002.png",
+		"id": 2
+	},
+	{
+		"kind": "card",
+		"description": [
+			"Cannot tell you"
+		],
+		"title": "Unknown rune",
+		"image": "gfx/cards/cards_unknown_003.png",
+		"id": 3
+	},
+	{
+		"kind": "card",
+		"description": [
+			"Cannot tell you"
+		],
+		"title": "Unknown rune",
+		"image": "gfx/cards/cards_unknown_004.png",
+		"id": 4
+	},
+    {
+        "kind": "collectible", 
+        "description": [
+			"I hen."
+        ], 
+        "title": "Unknown item",
+        "image": "gfx/collectibles/questionmark.png",
+        "id": 5
+    },
+    {
+		"kind": "pill",
+        "description": [], 
+        "id": 6, 
+        "title": "Unknown pill"
+    }
+]

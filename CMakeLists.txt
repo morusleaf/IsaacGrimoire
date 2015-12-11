@@ -17,6 +17,7 @@ INSTALL(
         resources/cards.js
         resources/pills.js
         resources/pillspic.json
+        resources/special.json
     DESTINATION
         .        
 )

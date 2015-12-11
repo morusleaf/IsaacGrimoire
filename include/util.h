@@ -10,7 +10,7 @@
 #define ALERT(str) fl_alert(str)
 #endif
 
-#ifdef _WIN64
+#ifdef _WIN32
 
 #define ErrorLog(format, ...) fprintf(stderr, \
         "[Error]" format "\n", __VA_ARGS__)
@@ -60,6 +60,6 @@
         pointer = 0; \
     }
 
-#ifdef _WIN64
+#ifdef _WIN32
 #define snprintf sprintf_s
 #endif

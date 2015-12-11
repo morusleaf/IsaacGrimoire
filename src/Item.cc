@@ -18,7 +18,10 @@ Item::Item(Json::Value node) {
 		stream << descriptions[i].asString();
 	}
 	description = stream.str();
-	if (kind == Card) groundId = node["groundid"].asInt();
+    groundId = node.get("groundid", 0).asInt();
+    /* int _groundid = node.get("groundid", -1).asInt(); */
+    /* if (_groundid != -1) groundid = _groundid; */
+	/* if (kind == Card) groundId = node["groundid"].asInt(); */
 }
 
 int Item::getId() {

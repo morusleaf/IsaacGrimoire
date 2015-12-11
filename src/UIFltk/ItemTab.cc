@@ -66,6 +66,7 @@ void ItemTab::refresh() {
 	}
 	catch (get_task_error) {
 		ErrorLog("can not use task_for_pid(), try sudo");
+        ALERT("can not use task_for_pid()");
 		delete newRoomItems;
 		delete newPlayerItems;
 		exit(1);

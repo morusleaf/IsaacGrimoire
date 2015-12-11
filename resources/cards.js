@@ -7,7 +7,7 @@ cards =
         ], 
         "title": "O - The Fool", 
         "image": "gfx/cards/cards_001.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -22,7 +22,7 @@ cards =
         ], 
         "title": "I - The Magician", 
         "image": "gfx/cards/cards_002.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -38,7 +38,7 @@ cards =
         ], 
         "title": "II - The High Priestess", 
         "image": "gfx/cards/cards_003.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -53,7 +53,7 @@ cards =
         ], 
         "title": "III - The Empress", 
         "image": "gfx/cards/cards_004.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             "speed up"
         ], 
@@ -68,7 +68,7 @@ cards =
         ], 
         "title": "IV - The Emperor", 
         "image": "gfx/cards/cards_005.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -83,7 +83,7 @@ cards =
         ], 
         "title": "V - The Hierophant", 
         "image": "gfx/cards/cards_006.png", 
-        "groundid": 46,
+        "groundid": 1,
         "pickup": "Two prayers for the lost", 
         "version": "rebirth", 
         "id": 6
@@ -95,7 +95,7 @@ cards =
         ], 
         "title": "VI - The Lovers", 
         "image": "gfx/cards/cards_007.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             "", 
             "the lost item pool"
@@ -111,7 +111,7 @@ cards =
         ], 
         "title": "VII - The Chariot", 
         "image": "gfx/cards/cards_008.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -126,7 +126,7 @@ cards =
         ], 
         "title": "VIII - Justice", 
         "image": "gfx/cards/cards_009.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -142,7 +142,7 @@ cards =
         ], 
         "title": "IX - The Hermit", 
         "image": "gfx/cards/cards_010.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -157,7 +157,7 @@ cards =
         ], 
         "title": "X - Wheel of Fortune", 
         "image": "gfx/cards/cards_011.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -173,7 +173,7 @@ cards =
         ], 
         "title": "XI - Strength", 
         "image": "gfx/cards/cards_012.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -189,7 +189,7 @@ cards =
         ], 
         "title": "XII - The Hanged Man", 
         "image": "gfx/cards/cards_013.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             "", 
             "the lost item pool"
@@ -205,7 +205,7 @@ cards =
         ], 
         "title": "XIII - Death", 
         "image": "gfx/cards/cards_014.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -220,7 +220,7 @@ cards =
         ], 
         "title": "XIV - Temperance", 
         "image": "gfx/cards/cards_015.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             "", 
             "the lost item pool"
@@ -236,7 +236,7 @@ cards =
         ], 
         "title": "XV - The Devil", 
         "image": "gfx/cards/cards_016.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             "damage up "
         ], 
@@ -252,7 +252,7 @@ cards =
         ], 
         "title": "XVI - The Tower", 
         "image": "gfx/cards/cards_017.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -268,7 +268,7 @@ cards =
         ], 
         "title": "XVII - The Stars", 
         "image": "gfx/cards/cards_018.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -283,7 +283,7 @@ cards =
         ], 
         "title": "XVIII - The Moon", 
         "image": "gfx/cards/cards_019.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -298,7 +298,7 @@ cards =
         ], 
         "title": "XIX - The Sun", 
         "image": "gfx/cards/cards_020.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -315,7 +315,7 @@ cards =
         ], 
         "title": "XX - Judgement", 
         "image": "gfx/cards/cards_021.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -331,7 +331,7 @@ cards =
         ], 
         "title": "XXI - The World", 
         "image": "gfx/cards/cards_022.png", 
-        "groundid": 46,
+        "groundid": 1,
         "tags": [
             ""
         ], 
@@ -347,7 +347,7 @@ cards =
         ], 
         "title": "2 of Spades", 
         "image": "gfx/cards/cards_025.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -363,7 +363,7 @@ cards =
         ], 
         "title": "2 of Clubs", 
         "image": "gfx/cards/cards_023.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -380,7 +380,7 @@ cards =
         ], 
         "title": "2 of Hearts", 
         "image": "gfx/cards/cards_026.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             "", 
             "the lost item pool"
@@ -397,7 +397,7 @@ cards =
         ], 
         "title": "2 of Diamonds", 
         "image": "gfx/cards/cards_024.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -412,7 +412,7 @@ cards =
         ], 
         "title": "The Joker", 
         "image": "gfx/cards/cards_027.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -431,7 +431,7 @@ cards =
         ], 
         "title": "Chaos Card", 
         "image": "gfx/cards/cards_037.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -448,7 +448,7 @@ cards =
         ], 
         "title": "Credit Card", 
         "image": "gfx/cards/cards_038.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -472,7 +472,7 @@ cards =
         ], 
         "title": "Rules Card", 
         "image": "gfx/cards/cards_039.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -488,7 +488,7 @@ cards =
         ], 
         "title": "Card Against Humanity", 
         "image": "gfx/cards/cards_040.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -506,7 +506,7 @@ cards =
         ], 
         "title": "Suicide King", 
         "image": "gfx/cards/cards_041.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -522,7 +522,7 @@ cards =
         ], 
         "title": "Rune of Algiz", 
         "image": "gfx/cards/cards_035.png", 
-        "groundid": 48,
+        "groundid": 3,
         "tags": [
             ""
         ], 
@@ -538,7 +538,7 @@ cards =
         ], 
         "title": "Rune of Ansuz", 
         "image": "gfx/cards/cards_032.png", 
-        "groundid": 48,
+        "groundid": 3,
         "tags": [
             ""
         ], 
@@ -554,7 +554,7 @@ cards =
         ], 
         "title": "Rune of Berkano", 
         "image": "gfx/cards/cards_034.png", 
-        "groundid": 48,
+        "groundid": 3,
         "tags": [
             ""
         ], 
@@ -572,7 +572,7 @@ cards =
         ], 
         "title": "Rune of Dagaz", 
         "image": "gfx/cards/cards_031.png", 
-        "groundid": 49,
+        "groundid": 4,
         "tags": [
             ""
         ], 
@@ -588,7 +588,7 @@ cards =
         ], 
         "title": "Rune of Ehwaz", 
         "image": "gfx/cards/cards_030.png", 
-        "groundid": 49,
+        "groundid": 4,
         "tags": [
             ""
         ], 
@@ -604,7 +604,7 @@ cards =
         ], 
         "title": "Rune of Hagalaz", 
         "image": "gfx/cards/cards_028.png", 
-        "groundid": 49,
+        "groundid": 4,
         "tags": [
             ""
         ], 
@@ -622,7 +622,7 @@ cards =
         ], 
         "title": "Rune of Jera", 
         "image": "gfx/cards/cards_029.png", 
-        "groundid": 49,
+        "groundid": 4,
         "tags": [
             ""
         ], 
@@ -638,7 +638,7 @@ cards =
         ], 
         "title": "Rune of Perthro", 
         "image": "gfx/cards/cards_033.png", 
-        "groundid": 48,
+        "groundid": 3,
         "tags": [
             ""
         ], 
@@ -672,7 +672,7 @@ cards =
         ], 
         "title": "Blank Rune", 
         "image": "gfx/cards/cards_036.png", 
-        "groundid": 48,
+        "groundid": 3,
         "tags": [
             ""
         ], 
@@ -688,7 +688,7 @@ cards =
         ], 
         "title": "Dice Shard", 
         "image": "gfx/cards/cards_044.png", 
-        "groundid": 44,
+        "groundid": 0,
         "tags": [
             ""
         ], 
@@ -702,7 +702,7 @@ cards =
         ], 
         "title": "Get Out Of Jail Free Card", 
         "image": "gfx/cards/cards_042.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -718,7 +718,7 @@ cards =
         ], 
         "title": "? Card", 
         "image": "gfx/cards/cards_043.png", 
-        "groundid": 47,
+        "groundid": 2,
         "tags": [
             ""
         ], 
@@ -733,7 +733,7 @@ cards =
         ], 
         "title": "Emergency Contact", 
         "image": "gfx/cards/cards_045.png", 
-        "groundid": 45,
+        "groundid": 0,
         "tags": [
             ""
         ], 
@@ -741,46 +741,6 @@ cards =
         "version": "rebirth", 
         "id": 45
     }, 
-	{
-		"kind": "card",
-		"description": [
-			"Cannot tell you"
-		],
-		"title": "Unknown card",
-		"image": "gfx/cards/cards_unknown_001.png",
-        "groundid": 46,
-		"id": 46
-	},
-	{
-		"kind": "card",
-		"description": [
-			"Cannot tell you"
-		],
-		"title": "Unknown special card",
-		"image": "gfx/cards/cards_unknown_002.png",
-        "groundid": 47,
-		"id": 47
-	},
-	{
-		"kind": "card",
-		"description": [
-			"Cannot tell you"
-		],
-		"title": "Unknown rune",
-		"image": "gfx/cards/cards_unknown_003.png",
-        "groundid": 48,
-		"id": 48
-	},
-	{
-		"kind": "card",
-		"description": [
-			"Cannot tell you"
-		],
-		"title": "Unknown rune",
-		"image": "gfx/cards/cards_unknown_004.png",
-        "groundid": 49,
-		"id": 49
-	},
     {
         "kind": "other", 
         "description": [

@@ -11407,14 +11407,5 @@ collectibles =
             "Devil Room", 
             "Greed Mode Devil Room"
         ]
-    },
-    {
-        "kind": "collectible", 
-        "description": [
-			"I hen."
-        ], 
-        "title": "Unknown item",
-        "image": "gfx/collectibles/questionmark.png",
-        "id": 442
     }
 ]

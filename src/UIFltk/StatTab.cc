@@ -28,6 +28,7 @@ void StatTab::refresh() {
 	}
 	catch (get_task_error) {
 		ErrorLog("can not use task_for_pid(), try sudo");
+        ALERT("can not use task_for_pid()");
 		exit(1);
 	}
 	catch (get_process_error& e) {
