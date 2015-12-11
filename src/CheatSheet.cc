@@ -2,7 +2,10 @@
 #include <fstream>
 #include "util.h"
 #include <stdexcept>
+#ifdef _WIN32
+#else
 #include <CoreFoundation/CFBundle.h>
+#endif
 
 static bool endwith(std::string const &value, std::string const &ending) {
 	if (ending.size() > value.size()) return false;

@@ -2,13 +2,13 @@
 
 #include <iostream>
 
-#define DEBUG
+/* #define DEBUG */
 //#define DEBUGUI
 
-#ifdef DEBUG
+/* #ifdef DEBUG */
 #include <FL/fl_ask.H>
 #define ALERT(str) fl_alert(str)
-#endif
+/* #endif */
 
 #ifdef _WIN32
 

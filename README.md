@@ -29,3 +29,4 @@ If you are under the blind curse, the collectibles' info will be hidden, too.
 ##Cheat Table
 I found most of the Mac version's address with Bit-Slicer. When I was writting
 windows version, Cheat Engine helped a lot.
+You can find some DOT files in hack/ which describe cheat table.

@@ -9999,7 +9999,7 @@ collectibles =
         "rechargetime": "4 rooms.", 
         "kind": "collectible", 
         "description": [
-            "When used, can be thrown at enemies to capture them (similar to a Pok\u00c3\u00a9 Ball).", 
+            "When used, can be thrown at enemies to capture them (similar to a Poke Ball).", 
             "After capturing an enemy, the next use of the Friendly Ball will re-spawn the same enemy as a friendly companion which will attack other enemies.", 
             "The companion will persist between rooms and floors until it dies by taking enough damage."
         ], 

@@ -28,7 +28,7 @@ static int gate_handler(int event) {
 }
 
 int main(int argc, char* argv[]) {
-	SheetWindow sheetwindow(WINDOW_W, WINDOW_H, WINDOW_MENU);
+	SheetWindow sheetwindow(WINDOW_W, WINDOW_H, WINDOW_MENU " " VERSION);
 	sheetwindow.show();
 	Fl::add_handler(gate_handler);
 	Fl::add_timeout(0.5, timeup, sheetwindow.inquirerpanel);

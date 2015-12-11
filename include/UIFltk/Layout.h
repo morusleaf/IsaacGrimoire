@@ -1,5 +1,7 @@
 #pragma once
 
+#define VERSION "1.0"
+
 #define SCROLLBAR_W 30
 #define ITEM_W 32
 #define ITEM_H 32
