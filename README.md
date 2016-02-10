@@ -5,6 +5,8 @@ It will read the game's memory and automatically display every items' usage.
 I hope it can save player from searching item in cheat sheet and memorizing pill
 effects in every run.
 
+The app can run on Windows(7 and later) and OSX(10.10 and later).
+
 #Download
 * [From Google Drive](https://drive.google.com/open?id=0BxzQMcyJbMKebXdmaTVlem0yYTg)
 * [From Baidu Cloud](http://pan.baidu.com/s/1hqSCYbi)

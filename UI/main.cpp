@@ -1,9 +1,14 @@
 #include "mainwindow.h"
 #include <QApplication>
+#ifdef _WIN32
+#else
 #include <Security/Authorization.h>
 #include <Security/AuthorizationTags.h>
 #include <string.h>
+#endif
 
+#ifdef _WIN32
+#else
 // Run the plugin as privileged process since we need to read other process
 // Reference: http://www.occam.com/osx/OSX_SecFmwk.pdf
 // Reference: https://developer.apple.com/library/mac/documentation/Security/Reference/SecurityFrameworkReference/index.html
@@ -34,8 +39,15 @@ int authRun(char* fileName) {
     AuthorizationFree(ref, kAuthorizationFlagDestroyRights);
     return 0;
 }
+#endif
 
 int main(int argc, char *argv[]) {
+#ifdef _WIN32
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
+#else
     QApplication::setSetuidAllowed(true);
     if (argc == 2 && strcmp(argv[1], "withprivilege") == 0) {
         QApplication a(argc, argv);
@@ -45,4 +57,5 @@ int main(int argc, char *argv[]) {
     }
     else
         return authRun(argv[0]);
+#endif
 }
