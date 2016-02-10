@@ -1,0 +1,457 @@
+[
+    {
+        "kind": "pill", 
+        "title": "Bad Gas", 
+        "description": [
+            [], 
+            [
+                "使用之后角色将会放出毒气,使周围的敌人中毒"
+            ]
+        ], 
+        "id": 0
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Bad Trip", 
+        "description": [
+            [], 
+            [
+                "使角色受到一格血的伤害这个伤害会影响恶魔房的开启率", 
+                "额外的,在角色没有 PHD(药学博士证书)或者 Virgo(处女座)且只拥有半颗心或者一 颗心时,该胶囊会变成 Full Health(满生命值)换言之这种胶囊无法杀死你", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Balls of Steel (钢球)"
+            ]
+        ], 
+        "id": 1
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Balls of Steel", 
+        "description": [
+            [], 
+            [
+                "使角色获得两颗魂心", 
+                "注意是获得而不是掉落,与 V - THE HIEROPHANT(教皇)的效果不同"
+            ]
+        ], 
+        "id": 2
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Bombs are Key", 
+        "description": [
+            [], 
+            [
+                "使角色的钥匙数和炸弹数调换"
+            ]
+        ], 
+        "id": 3
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Explosive Diarrhea", 
+        "description": [
+            [], 
+            [
+                "使角色脚下产生即爆炸弹,共生成 5 个"
+            ]
+        ], 
+        "id": 4
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Full Health", 
+        "description": [
+            [], 
+            [
+                "使角色回复所有红心", 
+                "如果没有心之容器则不会产生效果"
+            ]
+        ], 
+        "id": 5
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Health Down", 
+        "description": [
+            [], 
+            [
+                "使角色失去一个心之容器不会影响恶魔房的开启率", 
+                "如果角色拥有的心之容器小于等于 1 个则会变成 Health Up(生命上升)换言之这种胶囊 无法清除你的心之容器", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Health Up(生 命上升)"
+            ]
+        ], 
+        "id": 6
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Health Up", 
+        "description": [
+            [], 
+            [
+                "使角色获得一个空的心之容器", 
+                "若在有魂/黑心的 12 血情况下使用此胶囊,最后一颗魂/黑心会消失", 
+                "???(小蓝人)将会获得一颗魂心", 
+                "在只有魂\\黑心的情况下连吃 12 个这种胶囊将会进入一种 12 个空心之容器没有血的情况; 这种情况下不会马上死亡,但退出游戏再进入或者受到伤害后角色便会死亡;获得红心后即 可脱离这种状态"
+            ]
+        ], 
+        "id": 7
+    }, 
+    {
+        "kind": "pill", 
+        "title": "I Found Pills", 
+        "description": [
+            [], 
+            [
+                "角色发出“诶”一声,改变外表", 
+                "没有任何实质性的用途"
+            ]
+        ], 
+        "id": 8
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Puberty", 
+        "description": [
+            [], 
+            [
+                "角色头上长毛", 
+                "没有任何实质性的用途"
+            ]
+        ], 
+        "id": 9
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Pretty Fly", 
+        "description": [
+            [], 
+            [
+                "使角色获得一个苍蝇环绕物若角色已经有 3 个环绕物则无效", 
+                "苍蝇环绕物可以阻挡子弹,没有接触伤害但是可以秒杀接触到的红苍蝇和合体红苍蝇"
+            ]
+        ], 
+        "id": 10
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Range Down", 
+        "description": [
+            [], 
+            [
+                "射程-2", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Range Up(射 程上升)"
+            ]
+        ], 
+        "id": 11
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Range Up", 
+        "description": [
+            [], 
+            [
+                "射程+2.5"
+            ]
+        ], 
+        "id": 12
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Speed Down", 
+        "description": [
+            [], 
+            [
+                "移速-0.12", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Speed Up(移 速上升)"
+            ]
+        ], 
+        "id": 13
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Speed Up", 
+        "description": [
+            [], 
+            [
+                "移速+0.15"
+            ]
+        ], 
+        "id": 14
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Tears Down", 
+        "description": [
+            [], 
+            [
+                "射速-0.28", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Tears Up(射 速上升)"
+            ]
+        ], 
+        "id": 15
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Tears Up", 
+        "description": [
+            [], 
+            [
+                "射速+0.35"
+            ]
+        ], 
+        "id": 16
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Luck Down", 
+        "description": [
+            [], 
+            [
+                "幸运-1", 
+                "在持有被动道具 PHD(药学博士证书)或者 Virgo(处女座)之后将会变成 Luck Up(幸运 上升)"
+            ]
+        ], 
+        "id": 17
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Luck Up", 
+        "description": [
+            [], 
+            [
+                "幸运+1"
+            ]
+        ], 
+        "id": 18
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Telepills", 
+        "description": [
+            [], 
+            [
+                "传送角色到随机房间", 
+                "有大概 1/15 的几率进入 ERROR 房间,有非常非常小(1/650?)的几率进入黑市"
+            ]
+        ], 
+        "id": 19
+    }, 
+    {
+        "kind": "pill", 
+        "title": "48 Hour Energy!", 
+        "description": [
+            [], 
+            [
+                "立即使主动道具充能并且掉落 1~2 个电池", 
+                "拥有被动道具 The Battery(蓄电池)时,使用这个胶囊也会使主动道具的过度充能充满", 
+                "【DLC】和主动道具 Placebo(安慰剂)配合可以无限刷电池"
+            ]
+        ], 
+        "id": 20
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Hematemesis", 
+        "description": [
+            [], 
+            [
+                "若角色有心之容器,则当前血量强制变为 1 红心(所有心之容器保留)", 
+                "掉落 1-4 个红心"
+            ]
+        ], 
+        "id": 21
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Paralysis", 
+        "description": [
+            [], 
+            [
+                "使角色在数秒内不能做任何事"
+            ]
+        ], 
+        "id": 22
+    }, 
+    {
+        "kind": "pill", 
+        "title": "I can see forever!", 
+        "description": [
+            [], 
+            [
+                "使用后当前层有效,若某房间内若存在隐藏房和超级隐藏房的入口,则入口会自动打开"
+            ]
+        ], 
+        "id": 23
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Pheromones", 
+        "description": [
+            [], 
+            [
+                "放出粉红色的气体,使全房间的怪物获得魅惑状态"
+            ]
+        ], 
+        "id": 24
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Amnesia", 
+        "description": [
+            [], 
+            [
+                "在本层获得 Curse of the Lost(迷失诅咒),即本层无法显示地图", 
+                "在持有被动道具 PHD(药学博士证书) 或者 Virgo(处女座) 之后将会变成 I Can See Forever(我永远能看见)"
+            ]
+        ], 
+        "id": 25
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Lemon Party", 
+        "description": [
+            [], 
+            [
+                "在角色脚下产生很大一滩黄色液体,持续数秒,对踩到它的地面敌人造成 22 点/帧的伤害"
+            ]
+        ], 
+        "id": 26
+    }, 
+    {
+        "kind": "pill", 
+        "title": "R U A Wizard?", 
+        "description": [
+            [], 
+            [
+                "角色的眼泪暂时变成 45 度斜射,持续 1 分钟左右", 
+                "对 Ipecac(吐根)也有效", 
+                "对 Brimstone(硫磺火),Dr.Fetus(婴儿博士),Epic Fetus(史诗博士),Mom's Knife(妈 刀),Technology(科技),Technology 2(科技 2),Tech X(科技 X),Monstro's Lung(萌死 戳的肺)无效", 
+                "【DLC】获得 Tractor Beam(牵引光束)后该胶囊无效", 
+                "DLC 新胶囊"
+            ]
+        ], 
+        "id": 27
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Percs!", 
+        "description": [
+            [], 
+            [
+                "在当前房间获得 The Wafer(圣饼)效果,受伤时扣血强制为半心"
+            ]
+        ], 
+        "id": 28
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Addicted!", 
+        "description": [
+            [], 
+            [
+                "角色在当前房间内受伤时扣血强制为 1 心 解锁:完成挑战 24"
+            ]
+        ], 
+        "id": 29
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Re-Lax", 
+        "description": [
+            [], 
+            [
+                "角色移动时生成大便,移动越快生成的大便越多 解锁:完成挑战 25"
+            ]
+        ], 
+        "id": 30
+    }, 
+    {
+        "kind": "pill", 
+        "title": "???", 
+        "description": [
+            [], 
+            [
+                "在当前层获得 Curse of the Maze(迷失诅咒)"
+            ]
+        ], 
+        "id": 31
+    }, 
+    {
+        "kind": "pill", 
+        "title": "One makes you larger", 
+        "description": [
+            [], 
+            [
+                "使角色体积变大,声音变粗"
+            ]
+        ], 
+        "id": 32
+    }, 
+    {
+        "kind": "pill", 
+        "title": "One makes you small", 
+        "description": [
+            [], 
+            [
+                "使角色体积变小,声音变细"
+            ]
+        ], 
+        "id": 33
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Infested!", 
+        "description": [
+            [], 
+            [
+                "摧毁房间内所有大便,并在所有大便的位置和角色脚下生成一个蓝蜘蛛"
+            ]
+        ], 
+        "id": 34
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Infested?", 
+        "description": [
+            [], 
+            [
+                "生成 1-3 个蓝蜘蛛"
+            ]
+        ], 
+        "id": 35
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Power Pill!", 
+        "description": [
+            [], 
+            [
+                "触发 The Gamekid 效果,角色无敌数秒并对接触到的敌人造成 40 点伤害,每“吃掉”两个 敌人回复半红心"
+            ]
+        ], 
+        "id": 36
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Retro Vision", 
+        "description": [
+            [], 
+            [
+                "30 秒内使画面马赛克化 3 次"
+            ]
+        ], 
+        "id": 37
+    }, 
+    {
+        "kind": "pill", 
+        "title": "Friends Till The End", 
+        "description": [
+            [], 
+            [
+                "生成三只蓝苍蝇", 
+                "这个胶囊曾在原版以撒的结合和羔羊版本中出现过,但在重生版本和前几个 Afterbirth 版 本中未出现,现在重新加入到游戏中"
+            ]
+        ], 
+        "id": 38
+    }
+]

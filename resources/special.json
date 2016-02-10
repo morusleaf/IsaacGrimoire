@@ -2,7 +2,12 @@
 	{
 		"kind": "card",
 		"description": [
-			"Cannot tell you"
+            [
+                "It's on the floor"
+            ],
+            [
+                "在地上"
+            ]
 		],
 		"title": "Unknown card",
 		"image": "gfx/cards/cards_unknown_001.png",
@@ -11,7 +16,12 @@
 	{
 		"kind": "card",
 		"description": [
-			"Cannot tell you"
+            [
+                "It's on the floor"
+            ],
+            [
+                "在地上"
+            ]
 		],
 		"title": "Unknown special card",
 		"image": "gfx/cards/cards_unknown_002.png",
@@ -20,7 +30,12 @@
 	{
 		"kind": "card",
 		"description": [
-			"Cannot tell you"
+            [
+                "It's on the floor"
+            ],
+            [
+                "在地上"
+            ]
 		],
 		"title": "Unknown rune",
 		"image": "gfx/cards/cards_unknown_003.png",
@@ -29,7 +44,12 @@
 	{
 		"kind": "card",
 		"description": [
-			"Cannot tell you"
+			[
+                "It's on the floor"
+            ],
+            [
+                "在地上"
+            ]
 		],
 		"title": "Unknown rune",
 		"image": "gfx/cards/cards_unknown_004.png",
@@ -38,7 +58,12 @@
     {
         "kind": "collectible", 
         "description": [
-			"I hen."
+            [
+                "You are cursed"
+            ],
+            [
+                "你中了诅咒"
+            ]
         ], 
         "title": "Unknown item",
         "image": "gfx/collectibles/questionmark.png",
@@ -46,7 +71,14 @@
     },
     {
 		"kind": "pill",
-        "description": [], 
+        "description": [
+            [
+                "Please eat me"
+            ],
+            [
+                "来尝尝"
+            ]
+        ], 
         "id": 6, 
         "title": "Unknown pill"
     }

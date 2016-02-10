@@ -1,9 +1,0 @@
-digraph UI {
-    SheetWindow -> InquirerPanel;
-    InquirerPanel -> {ItemTab, StatTab, SettingTab};
-    ItemTab -> {ItemPane, InfoPane};
-    ItemPane -> ItemImageBox;
-    InfoPane -> {Title, Description};
-    StatTab -> HUDPane;
-    HUDPane -> {MoveSpeed, TearRange, TearSpeed, TearHeight, TearDamage, Luck};
-}

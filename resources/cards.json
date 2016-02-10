@@ -1,0 +1,983 @@
+[
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports the player to the first room of the current floor."
+            ], 
+            [
+                "传送到当前层的初始房间"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "O - The Fool", 
+        "id": 1, 
+        "pickup": "Where your journey begins", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_001.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "For the current room, tears now have the Spoon Bender effect, which allows them to curve towards enemies and gives them a purple appearance."
+            ], 
+            [
+                "角色子弹在当前房间获得跟踪效果"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "I - The Magician", 
+        "id": 2, 
+        "pickup": "May you never miss your goal", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_002.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Summons Mom's foot which will stomp on a random enemy in the current room, dealing 300 damage.", 
+                "If no enemies are in the current room, the foot will target Isaac (and do damage if it hits), however it can be used to break rocks."
+            ], 
+            [
+                "在当前房间召唤妈腿,对敌人造成 300 点伤害", 
+                "如果当前房间没有敌人,则妈腿会攻击角色"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "II - The High Priestess", 
+        "id": 3, 
+        "pickup": "Mother is watching you", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_003.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Gives the player the Whore of Babylon effect for the current room, increasing damage and speed."
+            ], 
+            [
+                "在当前房间获得 Whore of Babylon(巴比伦娼妇)效果,增加伤害和移速"
+            ]
+        ], 
+        "tags": [
+            "speed up"
+        ], 
+        "groundid": 1, 
+        "title": "III - The Empress", 
+        "id": 4, 
+        "pickup": "May your rage bring power", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_004.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports the player to the Boss room on the current floor."
+            ], 
+            [
+                "传送到当前层的 Boss 房"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "IV - The Emperor", 
+        "id": 5, 
+        "pickup": "Challenge me!", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_005.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns 2 Soul hearts on the floor."
+            ], 
+            [
+                "在地上掉落两个魂心"
+            ]
+        ], 
+        "title": "V - The Hierophant", 
+        "groundid": 1, 
+        "id": 6, 
+        "pickup": "Two prayers for the lost", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_006.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns 2 red hearts on the floor."
+            ], 
+            [
+                "在地上掉落两个红心"
+            ]
+        ], 
+        "tags": [
+            "", 
+            "the lost item pool"
+        ], 
+        "groundid": 1, 
+        "title": "VI - The Lovers", 
+        "id": 7, 
+        "pickup": "May you prosper and be in good health", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_007.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Grants the same effect as 'My Little Unicorn', which makes Isaac invincible and deal 40 contact damage to enemies per hit."
+            ], 
+            [
+                "获得 My Little Unicorn(我的小独角)的效果,一定时间无敌并对接触到的敌人造成 40 点 伤害"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "VII - The Chariot", 
+        "id": 8, 
+        "pickup": "May nothing stand before you", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_008.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns 1 bomb, 1 key, 1 coin, 1 heart, which can be random variants of each."
+            ], 
+            [
+                "在地上掉落炸弹、钥匙、硬币、红心各一个", 
+                "这些基础掉落物可能会被替换,如红心可能会被替换成魂心等"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "VIII - Justice", 
+        "id": 9, 
+        "pickup": "May your future become balanced", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_009.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports the player to the Shop.", 
+                "On or below the Womb, this acts as a random teleport, since there are no shops on those floors."
+            ], 
+            [
+                "传送到当前层的商店", 
+                "如果当前层无商店,则随机传送到一个房间"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "IX - The Hermit", 
+        "id": 10, 
+        "pickup": "May you see what life has to offer", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_010.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns a Slot Machine or a Fortune Machine."
+            ], 
+            [
+                "生成一个赌博机或预言机"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "X - Wheel of Fortune", 
+        "id": 11, 
+        "pickup": "Spin the wheel of destiny", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_011.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Gives the player the Magic Mushroom effect, which increasing size and all stats by 1 for the current room.", 
+                "If you use the Strength card with 12 heart containers, it will take you down to 11 when you leave the room."
+            ], 
+            [
+                "角色在当前房间获得 Magic Mushroom(魔法菇)效果,增加一个心之容器并且全属性上 升", 
+                "如果角色的心之容器有 12 个,则使用该卡片后出房间,心之容器将变为 11 个"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XI - Strength", 
+        "id": 12, 
+        "pickup": "May your power bring rage", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_012.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Gives the player the flying effect for the current room, allowing the player to fly over obstacles in the room.", 
+                "This card is useless if you have any item which allows you to permanently fly."
+            ], 
+            [
+                "角色在当前房间获得飞行能力"
+            ]
+        ], 
+        "tags": [
+            "", 
+            "the lost item pool"
+        ], 
+        "groundid": 1, 
+        "title": "XII - The Hanged Man", 
+        "id": 13, 
+        "pickup": "May you find enlightenment", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_013.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Deals 40 damage to all enemies in the room in a similar style to the Necronomicon."
+            ], 
+            [
+                "在当前房间触发 Necronomicon(死灵书)效果,对房间内敌人造成 40 点伤害"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XIII - Death", 
+        "id": 14, 
+        "pickup": "Lay waste to all that oppose you", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_014.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns a Blood Donation Machine."
+            ], 
+            [
+                "生成一个卖血机", 
+                "【DLC】在 Greed Mode(贪婪模式)中,生成一个恶魔乞丐"
+            ]
+        ], 
+        "tags": [
+            "", 
+            "the lost item pool"
+        ], 
+        "groundid": 1, 
+        "title": "XIV - Temperance", 
+        "id": 15, 
+        "pickup": "May you be pure in heart", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_015.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Gives the Book of Belial effect for the current room, increasing damage."
+            ], 
+            [
+                "在当前房间触发 Book of Belial(贝利尔之书)的效果,角色伤害增加"
+            ]
+        ], 
+        "tags": [
+            "damage up "
+        ], 
+        "groundid": 1, 
+        "title": "XV - The Devil", 
+        "id": 16, 
+        "pickup": "Revel in the power of your darkness", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_016.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns some troll bombs at random locations in the current room.", 
+                "Each bomb deals 60 damage (normal bomb damage."
+            ], 
+            [
+                "在当前房间触发 Anarchist Cookbook(无政府主义者食谱)效果,在地上生成 6 个即爆炸 弹"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XVI - The Tower", 
+        "id": 17, 
+        "pickup": "Destruction brings creation", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_017.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports the player to the Item Room.", 
+                "On or below the Womb, this acts as a random teleport, since there are no item rooms on those floors."
+            ], 
+            [
+                "传送到当前层的宝物房", 
+                "如果当前层无宝物房,则随机传送到一个房间"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XVII - The Stars", 
+        "id": 18, 
+        "pickup": "May you find what you desire", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_018.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports the player to the Secret Room."
+            ], 
+            [
+                "传送到当前层的隐藏房", 
+                "如果当前层无隐藏房(如蓝子宫层),则随机传送到一个房间"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XVIII - The Moon", 
+        "id": 19, 
+        "pickup": "May you find all you have lost", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_019.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "A card with three uses: A full heal, deals 100 damage to all enemies in the current room and reveals the entire map for the current floor (Treasure Map + The Compass)."
+            ], 
+            [
+                "回复所有红心", 
+                "对当前房间敌人造成 100 点伤害", 
+                "触发 Treasure Map(藏宝图)和 The Compass(指南针)的效果,并显示当前层隐藏房位 置(当有 Curse of Darkness(黑暗诅咒)时无效)"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XIX - The Sun", 
+        "id": 20, 
+        "pickup": "May the light heal and enlighten you", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_020.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Spawns a beggar.", 
+                "Has a chance to be a demon beggar.", 
+                "Killing a Devil Beggar, Key Master, or Shell Game Beggar gives you an increased chance of finding Angel rooms instead of Devil rooms. See the dedicated Devil room page for more details."
+            ], 
+            [
+                "生成一个乞丐", 
+                "有一定几率生成恶魔乞丐", 
+                "有非常小的几率生成钥匙乞丐", 
+                "【DLC】有极其微小的几率生成炸弹乞丐"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XX - Judgement", 
+        "id": 21, 
+        "pickup": "Judge lest ye be judged", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_021.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Reveals the entire map and shows the icons for every room which has one.", 
+                "This is completely useless if you currently have both the Treasure Map and The Compass."
+            ], 
+            [
+                "触发 Treasure Map(藏宝图)和 The Compass(指南针)的效果,并显示当前层隐藏房位 置", 
+                "当有 Curse of Darkness(黑暗诅咒)时无效"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 1, 
+        "title": "XXI - The World", 
+        "id": 22, 
+        "pickup": "Open your eyes and see", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_022.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Doubles the number of Bombs you have.", 
+                "If you have no bombs, it gives you two."
+            ], 
+            [
+                "炸弹 X2", 
+                "如果没有炸弹,则炸弹+2"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "2 of Clubs", 
+        "id": 23, 
+        "pickup": "Item multiplier", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_023.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Doubles the number of coins you have.", 
+                "If you have no coins, it gives you two."
+            ], 
+            [
+                "硬币 X2", 
+                "如果没有硬币,则硬币+2"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "2 of Diamonds", 
+        "id": 24, 
+        "pickup": "Item multiplier", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_024.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Doubles the number of keys you have.", 
+                "If you have no keys, it gives you two."
+            ], 
+            [
+                "钥匙 X2", 
+                "如果没有钥匙,则钥匙+2"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "2 of Spades", 
+        "id": 25, 
+        "pickup": "Item multiplier", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_025.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Doubles your current red hearts up to full health.", 
+                "If you have half a heart left, the card recovers your first two heart containers.", 
+                "This card is useless for the Blue Baby."
+            ], 
+            [
+                "红心 X2"
+            ]
+        ], 
+        "tags": [
+            "", 
+            "the lost item pool"
+        ], 
+        "groundid": 2, 
+        "title": "2 of Hearts", 
+        "id": 26, 
+        "pickup": "Item multiplier", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_026.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Teleports you to the Devil Deal Room on the current floor."
+            ], 
+            [
+                "传送到当前层的恶魔房/天使房"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "The Joker", 
+        "id": 27, 
+        "pickup": "???", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_027.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, this rune will destroy all breakable objects in the current room, such as poop, rocks and skulls."
+            ], 
+            [
+                "摧毁当前房间所有的可破坏障碍物", 
+                "有可能开启隐藏房或超级隐藏房的门(待确认)"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 4, 
+        "title": "Rune of Hagalaz", 
+        "pickup": "Destruction", 
+        "id": 28, 
+        "unlock": "Unlock this card by beating Challenge #1 (Pitch Black).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_028.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used this rune will double all pickups on the floor in the room.", 
+                "Creates copies of pickups, even if you haven't purchased them yet.", 
+                "Can be used to double the number of golden item chests in the first room of the final Chest floor."
+            ], 
+            [
+                "复制当前房间的掉落物", 
+                "无法复制 JERA 符文", 
+                "在商店内复制的掉落物无需花钱购买(卡片、心、钥匙、炸弹等)", 
+                "可以用来复制 The Chest(宝箱关)初始房间的四个金箱子以获得更多主被动道具"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 4, 
+        "title": "Rune of Jera", 
+        "pickup": "Abundance", 
+        "id": 29, 
+        "unlock": "Unlock this card by beating Challenge #2 (High Brow).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_029.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Creates a trapdoor on the floor (Same effect as We Need To Go Deeper)."
+            ], 
+            [
+                "触发 We Need To Go Deeper(再深入些)效果,在角色当前位置生成一个通往下一层的通 道或者地道入口"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 4, 
+        "title": "Rune of Ehwaz", 
+        "pickup": "Passage", 
+        "id": 30, 
+        "unlock": "Unlock this card by beating Challenge #3 (Head Trauma).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_030.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Removes the curse which is in effect on the current floor.", 
+                "Can also cure the effect of the Amnesia pill.", 
+                "+1 Soul Heart."
+            ], 
+            [
+                "移除当前层所有诅咒效果", 
+                "可以移除 Amnesia(失忆症)胶囊或???胶囊带来的诅咒效果,但如果在使用该卡片后使 用了以上两种胶囊则诅咒效果仍会生效", 
+                "魂心+1"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 4, 
+        "title": "Rune of Dagaz", 
+        "pickup": "Purity", 
+        "id": 31, 
+        "unlock": "Unlock this card by beating Challenge #4 (Darkness Falls).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_031.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, reveals the entire map including all the secret room locations and other icon rooms."
+            ], 
+            [
+                "完全显示当前层地图布局", 
+                "当有 Curse of Darkness(黑暗诅咒)时无效"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 3, 
+        "title": "Rune of Ansuz", 
+        "pickup": "Vision", 
+        "id": 32, 
+        "unlock": "Unlock this card by beating Challenge #5 (The Tank).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_032.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Rerolls all pedestal items in the current room (One time use of the D6)."
+            ], 
+            [
+                "使用后触发一次 D6 效果,重置当前房间的主被动道具"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 3, 
+        "title": "Rune of Perthro", 
+        "pickup": "Change", 
+        "id": 33, 
+        "unlock": "Unlock this card by beating Challenge #6 (Solar System).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_033.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Summons 3 blue friendly spiders and 3 blue flies."
+            ], 
+            [
+                "生成三个蓝苍蝇和三个蓝蜘蛛"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 3, 
+        "title": "Rune of Berkano", 
+        "pickup": "Companionship", 
+        "id": 34, 
+        "unlock": "Unlock this card by beating Challenge #20 (Purist).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_034.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, gives you an invincibility effect which lasts for 30 seconds (much longer than normal invincibility effects)."
+            ], 
+            [
+                "在当前房间内获得无敌防护罩,持续 30 秒"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 3, 
+        "title": "Rune of Algiz", 
+        "pickup": "Resistance", 
+        "id": 35, 
+        "unlock": "Unlock this card by beating Challenge #8 (Cat Got Your Tongue).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_035.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, gives a random Mystic rune effect.", 
+                "Possible effects include: Algiz, Ansuz, Berkano, Dagaz, Ehwaz, Hagalaz, Jera, Perthro."
+            ], 
+            [
+                "使用后触发随机一个符文的效果", 
+                "有25%几率在地上生成一个新的空白符文"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 3, 
+        "title": "Blank Rune", 
+        "pickup": "???", 
+        "id": 36, 
+        "unlock": "Unlock this card by beating Challenge #30 (Guardian).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_036.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "A card which can be thrown as a projectile directly infront of Isaac, instantly killing anything it hits.", 
+                "...Yes that includes every boss in the game!", 
+                "If thrown at a multi-phase boss like Satan, it will only kill that particular phase of the boss.", 
+                "Will destroy rocks and poop in its path.", 
+                "Can also be thrown against a door to open it (Doesn't work against Mega Satan's door)."
+            ], 
+            [
+                "使用时,会从角色位置飞出一张卡片,飞出方向为角色最后一次的移动方向", 
+                "卡片接触到的任何敌人都会立即死亡,包括 boss", 
+                "对于有明显多阶段的 boss(如 Satan 或 Mega Satan 等),该卡片只能秒杀他的其中一个阶 段", 
+                "卡片接触到可破坏障碍物(石头和大便等)时会直接摧毁它们", 
+                "卡片接触到普通的门时会使门被打开"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Chaos Card", 
+        "pickup": "???", 
+        "id": 37, 
+        "unlock": "Unlock this card by beating Challenge #9 (Demo Man).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_037.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, removes the price tag from all items in the current shop or devil deal, making everything free.", 
+                "The effect of the Credit Card only lasts for the current room."
+            ], 
+            [
+                "使用后,使当前房间物品下面的价格标签或心之容器标签消失(如商店或恶魔房),即角 色可以免费获得这些道具"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Credit Card", 
+        "pickup": "Charge it!", 
+        "id": 38, 
+        "unlock": "Unlock this card by beating Challenge #10 (Cursed!).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_038.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Displays a random cryptic message on the screen similar to the fortune machine ones. One of the following messages may show:", 
+                "\"Rooms may yield more than you expect\"", 
+                "\"Some doors require a blessing. Carry them with you\"", 
+                "\"The walls will harden over time. Time is the essence\"", 
+                "\"Sleeping gatekeepers will need to be awoken with a loud sound\"", 
+                "A piece of paper is your guide\"", 
+                "Deny his gifts to attain your reward\"", 
+                "A dark market lies under your feet", 
+                "Chub dislikes smoke!"
+            ], 
+            [
+                "使用后会显示一条和游戏有关的提示信息"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Rules Card", 
+        "pickup": "???", 
+        "id": 39, 
+        "unlock": "Unlock this card by beating Challenge #11 (Glass Cannon).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_039.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, fills the entire room with poop!"
+            ], 
+            [
+                "使当前房间充满大便"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Card Against Humanity", 
+        "pickup": "Something stinks...", 
+        "id": 40, 
+        "unlock": "Unlock this card by beating Challenge #12 (When Life Gives You Lemons).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_040.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, instantly kills you and spawns 10 pickup on the floor.", 
+                "Each of the 10 things spawned can be any type of consumable or sometimes a pedestal item (up to a maximum of 3 pedestal items).", 
+                "Any pedestal item created by Suicide King will be related to the room where it was used, meaning that using it in the Angel room will spawn Angel room items."
+            ], 
+            [
+                "使用后角色立即死亡并且在地上掉落十个掉落物或道具", 
+                "道具生成与当前房间道具池有关", 
+                "不要轻易使用该卡片,除非角色有额外的生命"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Suicide King", 
+        "pickup": "A true ending?", 
+        "id": 41, 
+        "unlock": "Unlock this card by beating Challenge #7 (Suicide King).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_041.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used, will open all doors in the current room, similar to a one-time use of Dad's Key."
+            ], 
+            [
+                "使用后触发 Dad's Key(爸爸的钥匙)效果,开启当前房间所有房门", 
+                "当然对 Mega Satan(超级撒旦)的大金门也是有效的"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "Get Out Of Jail Free Card", 
+        "pickup": "Open sesame", 
+        "id": 42, 
+        "unlock": "Unlock this card by beating Challenge #22 (Speed).", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_042.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used this card will activate a use of your spacebar item for free."
+            ], 
+            [
+                "可以触发一次当前主动道具的效果", 
+                "如果当前主动是 Blank Card(白卡),则使用后会被传送进 Error 房,并且白卡也会消失(如 果当前层没有 Error 房,则白卡消失并且生成一个 Error 房的 Shopkeeper)"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 2, 
+        "title": "? Card", 
+        "id": 43, 
+        "pickup": "Double active", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_043.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "Gives a one-time use of the D6 and D20 effects at the same time."
+            ], 
+            [
+                "使用后触发一次 D6+D20 效果,重置当前房间的主被动道具和掉落物"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 0, 
+        "title": "Dice Shard", 
+        "id": 44, 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_044.png"
+    }, 
+    {
+        "kind": "card", 
+        "description": [
+            [
+                "When used will cause two of Mom's Hand to come down and grab a random enemy."
+            ], 
+            [
+                "使用后落下两只妈手，随机拿走两个敌人"
+            ]
+        ], 
+        "tags": [
+            ""
+        ], 
+        "groundid": 0, 
+        "title": "Emergency Contact", 
+        "id": 45, 
+        "pickup": "Help from above", 
+        "version": "rebirth", 
+        "image": "gfx/cards/cards_045.png"
+    }
+]

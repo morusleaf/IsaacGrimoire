@@ -2,5 +2,4 @@ build
 *.numbers
 *.swp
 .DS_Store
-watch.png
-tool.sh
+*.qm
