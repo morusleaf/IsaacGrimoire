@@ -1,80 +1,48 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <QDebug>
-//#ifdef _WIN32
-//#else
-//#include <Security/Authorization.h>
-//#include <Security/AuthorizationTags.h>
-//#endif
-//#include <assert.h>
+#include <Security/Authorization.h>
+#include <Security/AuthorizationTags.h>
+#include <string.h>
+
+// Run the plugin as privileged process since we need to read other process
+// Reference: http://www.occam.com/osx/OSX_SecFmwk.pdf
+// Reference: https://developer.apple.com/library/mac/documentation/Security/Reference/SecurityFrameworkReference/index.html
+int authRun(char* fileName) {
+    AuthorizationItem right = {kAuthorizationRightExecute, 0, NULL, 0};
+    AuthorizationRights rightSet = {1, &right};
+    AuthorizationFlags flags = kAuthorizationFlagDefaults
+            | kAuthorizationFlagInteractionAllowed
+            | kAuthorizationFlagExtendRights;
+    AuthorizationRef ref;
+    OSStatus status = AuthorizationCreate(
+                &rightSet,
+                kAuthorizationEmptyEnvironment,
+                flags,
+                &ref);
+    if (status != errAuthorizationSuccess)
+        return -1;
+    char *Args[] = {"withprivilege", NULL};
+    FILE *pipe = NULL;
+    status = AuthorizationExecuteWithPrivileges(
+                ref,
+                fileName,
+                kAuthorizationFlagDefaults,
+                Args,
+                &pipe);
+    if (status != errAuthorizationSuccess)
+        return -1;
+    AuthorizationFree(ref, kAuthorizationFlagDestroyRights);
+    return 0;
+}
 
 int main(int argc, char *argv[]) {
     QApplication::setSetuidAllowed(true);
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    if (argc == 2 && strcmp(argv[1], "withprivilege") == 0) {
+        QApplication a(argc, argv);
+        MainWindow w;
+        w.show();
+        return a.exec();
+    }
+    else
+        return authRun(argv[0]);
 }
-
-//int runMain(int argc, char *argv[]) {
-
-//    QApplication a(argc, argv);
-//    MainWindow w;
-//    w.show();
-//    return a.exec();
-//}
-
-//int authRun(char *fileName) {
-//    AuthorizationItem items[1];
-//    items[0].name = kAuthorizationRightExecute;
-//    items[0].valueLength = 0;
-//    items[0].value = NULL;
-//    items[0].flags = 0;
-//    AuthorizationRights rights;
-//    rights.count = 1;
-//    rights.items = items;
-//    AuthorizationFlags flags =
-//            kAuthorizationFlagDefaults |
-//            kAuthorizationFlagInteractionAllowed |
-//            kAuthorizationFlagExtendRights;
-//    AuthorizationRef ref;
-//    OSStatus ret;
-//    ret = AuthorizationCreate(
-//                &rights,
-//                kAuthorizationEmptyEnvironment,
-//                flags,
-//                &ref);
-//    assert(ret == errAuthorizationSuccess);
-//    char *Args[] = {NULL};
-//    FILE *pipe = NULL;
-//    ret = AuthorizationExecuteWithPrivileges(
-//                ref,
-//                fileName,
-//                kAuthorizationFlagDefaults,
-//                Args,
-//                &pipe);
-//    assert(ret == errAuthorizationSuccess);
-//    AuthorizationFree(ref, kAuthorizationFlagDestroyRights);
-//    qDebug() << "called";
-//    return 0;
-//}
-
-//int main(int argc, char *argv[])
-//{
-//    QApplication::setSetuidAllowed(true);
-//    OSStatus ret;
-//    AuthorizationRef ref;
-//    ret = AuthorizationCopyPrivilegedReference(&ref, kAuthorizationFlagDefaults);
-//    switch (ret) {
-//    case errAuthorizationInvalidRef:
-//        return authRun(argv[0]);
-//    case errAuthorizationSuccess:
-//        return runMain(argc, argv);
-//    case errAuthorizationDenied:
-//        qDebug() << "denied";
-//        break;
-//    default:
-//        qDebug() << "unknown " << ret;
-//        break;
-//    }
-//}

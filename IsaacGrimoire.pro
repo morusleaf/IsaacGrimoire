@@ -7,9 +7,9 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-greaterThan(QT_MAJOR_VERSION, 4):greaterThan(QT_MINOR_VERSION, 4) {
-    macx:QMAKE_LFLAGS += -Wl -rpath @executable_path/../Frameworks
-}
+#greaterThan(QT_MAJOR_VERSION, 4):greaterThan(QT_MINOR_VERSION, 4) {
+#    macx:QMAKE_LFLAGS += -Wl -rpath @executable_path/../Frameworks
+#}
 macx {
     QMAKE_LFLAGS += -F /System/Library/Frameworks/Security.framework/
     LIBS += -framework Security
