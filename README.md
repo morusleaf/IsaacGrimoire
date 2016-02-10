@@ -1,16 +1,17 @@
 #Introduction
 Isaac's Grimoire is a real-time cheat sheet for The Binding of Isaac: Afterbirth.
+
 It will read the game's memory and automatically display every items' usage.
-I hope it can save player's time of searching item in cheat sheet and
-memorizing pill effects in every run.
+I hope it can save player from searching item in cheat sheet and memorizing pill
+effects in every run.
 
 #Download
-[From Github](https://github.com/morusleaf/IsaacGrimoire/releases/latest)
-[From Baidu Cloud](http://pan.baidu.com/s/1hqSCYbi)
+* [From Google Drive](https://drive.google.com/open?id=0BxzQMcyJbMKebXdmaTVlem0yYTg)
+* [From Baidu Cloud](http://pan.baidu.com/s/1hqSCYbi)
 
 #How to Use
 Open it and run The Binding of Isaac: Afterbirth, it will automatically
-show the names and descriptions of every items inside the room and on the
+show the names and descriptions of every item inside the room and on the
 player.
 
 ![screenshot](https://raw.githubusercontent.com/morusleaf/IsaacGrimoire/master/doc/screenshot.jpg)
